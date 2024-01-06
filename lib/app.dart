@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:vodafone_redesign/constants/appImages.dart';
+import 'package:vodafone_redesign/homepage/homepage.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vodafone_redesign/theme/app_colors.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -8,14 +12,8 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  List<Widget> pages = [
-    const Center(child: Text('Home')),
-    const Center(child: Text('Business')),
-    const Center(child: Text('School')),
-    Container(),
-    Container()
-  ];
-  int selectedIndex = 0;
+  List<Widget> pages = [Container(), Container(), const HomePage(), Container(), Container()];
+  int selectedIndex = 2;
   void onItemTapped(int index) {
     setState(() {
       selectedIndex = index;
@@ -28,21 +26,45 @@ class _AppState extends State<App> {
         body: pages[selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
-          items: const <BottomNavigationBarItem>[
+          items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.black),
-              label: 'Home',
+              icon: Icon(
+                Icons.computer,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              label: 'Services',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.business, color: Colors.black),
-              label: 'Business',
+              icon: Icon(
+                Icons.money,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              label: 'Cash',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.school, color: Colors.black),
-              label: 'School',
+              icon: SvgPicture.asset(
+                AppImages.mascotImage,
+                height: 70,
+                width: 70,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle_outline,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              label: 'Bundles',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.settings_outlined,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              label: 'Settings',
             ),
           ],
-          selectedItemColor: Theme.of(context).colorScheme.primary,
+          selectedItemColor: AppColors.primary,
           onTap: onItemTapped,
         ));
   }

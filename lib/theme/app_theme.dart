@@ -11,7 +11,7 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.light,
       colorScheme: ColorScheme.light(
-          primary: AppColors.primary,
+          primary: AppColors.black,
           background: AppColors.white,
           surface: AppColors.black,
           outline: AppColors.gray[100],
@@ -20,6 +20,7 @@ class AppTheme {
       indicatorColor: AppColors.gray[300],
       appBarTheme: const AppBarTheme(
         elevation: 0,
+        backgroundColor: Color(0xffF1F8F8),
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         iconTheme: IconThemeData(color: Colors.black),
         titleTextStyle: TextStyle(color: Colors.black, fontSize: 16),
@@ -61,6 +62,7 @@ class AppTheme {
       indicatorColor: AppColors.gray[700],
       appBarTheme: const AppBarTheme(
         elevation: 0,
+        backgroundColor: AppColors.black,
         systemOverlayStyle: SystemUiOverlayStyle.light,
         iconTheme: IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 16),
@@ -145,9 +147,9 @@ class AppTheme {
   }
 
   static BottomNavigationBarThemeData get _bottomNavigationBarThemeData {
-    return BottomNavigationBarThemeData(
+    return const BottomNavigationBarThemeData(
       selectedItemColor: AppColors.primary,
-      unselectedItemColor: AppColors.gray.shade200,
+      // unselectedItemColor: AppColors.black,
       type: BottomNavigationBarType.fixed,
       showUnselectedLabels: true,
     );

@@ -29,7 +29,7 @@ class _AppState extends State<App> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.computer,
+                Icons.devices,
                 color: Theme.of(context).colorScheme.primary,
               ),
               label: 'Services',

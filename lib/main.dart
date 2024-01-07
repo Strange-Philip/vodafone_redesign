@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Vodafone Redesign',
+      
       theme: AppTheme().light,
       debugShowCheckedModeBanner: false,
       darkTheme: AppTheme().dark,

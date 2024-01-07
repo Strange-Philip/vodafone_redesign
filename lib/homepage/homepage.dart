@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vodafone_redesign/constants/appImages.dart';
 import 'package:vodafone_redesign/homepage/components/manageCardsGrid.dart';
 
 import 'components/appbar.dart';
@@ -19,17 +21,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: VodaAppBar(
-        Padding(
-          padding: const EdgeInsets.only(right: 20),
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                isList = !isList;
-              });
-            },
-            child: Icon(
-              isList ? Icons.border_all : Icons.menu,
-              color: Theme.of(context).colorScheme.primary,
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              isList = !isList;
+            });
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: SvgPicture.asset(
+              Theme.of(context).brightness == Brightness.dark
+                  ? AppImages.vodaDark
+                  : AppImages.vodaLight,
+              height: 20,
+              width: 20,
             ),
           ),
         ),

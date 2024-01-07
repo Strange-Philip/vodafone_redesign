@@ -1,16 +1,15 @@
-# vodafone_redesign
+# Vodafone Redesign with Flutter
 
-A new Flutter project.
+🎨A flutter ui project inspired by this Ui design by [Might](https://linktr.ee/mightames
+).
 
-## Getting Started
+🔗Here is a link to the 👉🏾[original design on Behance](https://www.behance.net/gallery/188198965/Homepage-Redesign-of-the-Vodafone-App) .
 
-This project is a starting point for a Flutter application.
+## 🧪Additions I made to the design:
+Added some animations to the project to make it more interesting.
 
-A few resources to get you started if this is your first Flutter project:
+And a little easter egg where when you tap on the logo on the top left corner, the layout is switched...🤫
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+And oh, added dynamic theming too.🫣
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸Screenshots

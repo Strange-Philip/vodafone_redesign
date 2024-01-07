@@ -5,10 +5,10 @@ import 'package:vodafone_redesign/constants/appImages.dart';
 import 'package:vodafone_redesign/theme/app_colors.dart';
 
 class VodaAppBar extends AppBar {
-  final Widget switchAction;
+  final Widget leading;
   final BuildContext context;
   VodaAppBar(
-    this.switchAction, {
+    this.leading, {
     super.key,
     required this.context,
   }) : super(
@@ -32,7 +32,7 @@ class VodaAppBar extends AppBar {
             ),
             toolbarHeight: 80,
             actions: [
-              switchAction,
+              
               const Padding(
                 padding: EdgeInsets.only(right: 20),
                 child: Icon(

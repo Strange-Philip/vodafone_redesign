@@ -12,7 +12,21 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  List<Widget> pages = [Container(), Container(), const HomePage(), Container(), Container()];
+  List<Widget> pages = const [
+    Center(
+      child: Text('Services'),
+    ),
+    Center(
+      child: Text('Cash'),
+    ),
+    HomePage(),
+    Center(
+      child: Text('Bundle'),
+    ),
+    Center(
+      child: Text('Settings'),
+    ),
+  ];
   int selectedIndex = 2;
   void onItemTapped(int index) {
     setState(() {
@@ -32,12 +46,20 @@ class _AppState extends State<App> {
                 Icons.devices,
                 color: Theme.of(context).colorScheme.primary,
               ),
+              activeIcon: const Icon(
+                Icons.devices,
+                color: AppColors.vodafoneRed,
+              ),
               label: 'Services',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.money,
                 color: Theme.of(context).colorScheme.primary,
+              ),
+              activeIcon: const Icon(
+                Icons.money,
+                color: AppColors.vodafoneRed,
               ),
               label: 'Cash',
             ),
@@ -54,12 +76,20 @@ class _AppState extends State<App> {
                 Icons.add_circle_outline,
                 color: Theme.of(context).colorScheme.primary,
               ),
+              activeIcon: const Icon(
+                Icons.add_circle_outline,
+                color: AppColors.vodafoneRed,
+              ),
               label: 'Bundles',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings_outlined,
                 color: Theme.of(context).colorScheme.primary,
+              ),
+              activeIcon: const Icon(
+                Icons.settings_outlined,
+                color: AppColors.vodafoneRed,
               ),
               label: 'Settings',
             ),

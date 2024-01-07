@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../theme/app_colors.dart';
 
 class HomeCard extends StatelessWidget {
-  final IconData icon;
+  final IconData? icon;
+  final String? svg;
   final Widget title;
   final Widget subtitle;
 
-  const HomeCard({super.key, required this.icon, required this.title, required this.subtitle});
+  const HomeCard({super.key, this.icon, required this.title, required this.subtitle, this.svg});
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +36,19 @@ class HomeCard extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 2),
-                child: Icon(
-                  icon,
-                  color: AppColors.vodafoneRed,
-                ),
+                child: icon == null
+                    ? SvgPicture.asset(svg!,
+                        height: 22,
+                        width: 22,
+                        colorFilter: const ColorFilter.mode(
+                          AppColors.vodafoneRed,
+                          BlendMode.srcATop,
+                        ))
+                    : Icon(
+                        icon,
+                        color: AppColors.vodafoneRed,
+                        size: 25,
+                      ),
               ),
               const Spacer(),
               title,

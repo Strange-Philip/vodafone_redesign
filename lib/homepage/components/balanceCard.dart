@@ -70,27 +70,21 @@ class BalanceCard extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
-                      color: Theme.of(context).brightness == Brightness.dark
-                          ? Colors.white
-                          : Colors.black),
+                      color: Theme.of(context).colorScheme.primary),
                   children: [
                     TextSpan(
                       text: ' GB',
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
-                          color: Theme.of(context).brightness == Brightness.dark
-                              ? Colors.white
-                              : Colors.black),
+                          color: Theme.of(context).colorScheme.primary),
                     ),
                     TextSpan(
                       text: ' left',
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
-                          color: Theme.of(context).brightness == Brightness.dark
-                              ? Colors.white
-                              : Colors.black),
+                          color: Theme.of(context).colorScheme.primary),
                     ),
                   ],
                 )),

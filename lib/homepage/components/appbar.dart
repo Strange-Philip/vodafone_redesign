@@ -5,8 +5,10 @@ import 'package:vodafone_redesign/constants/appImages.dart';
 import 'package:vodafone_redesign/theme/app_colors.dart';
 
 class VodaAppBar extends AppBar {
+  final Widget switchAction;
   final BuildContext context;
-  VodaAppBar({
+  VodaAppBar(
+    this.switchAction, {
     super.key,
     required this.context,
   }) : super(
@@ -21,6 +23,7 @@ class VodaAppBar extends AppBar {
               ),
             ),
             surfaceTintColor: Colors.transparent,
+            centerTitle: true,
             title: const Text(
               'Good Morning, Might.',
               style: TextStyle(
@@ -29,15 +32,13 @@ class VodaAppBar extends AppBar {
             ),
             toolbarHeight: 80,
             actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    CupertinoIcons.bell_fill,
-                    color: AppColors.primary,
-                    size: 25,
-                  ),
+              switchAction,
+              const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Icon(
+                  CupertinoIcons.bell_fill,
+                  color: AppColors.primary,
+                  size: 25,
                 ),
               ),
             ]);

@@ -38,6 +38,29 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: pages[selectedIndex],
+        floatingActionButton: Theme(
+          data: Theme.of(context).copyWith(
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+          ),
+          child: FloatingActionButton.large(
+            onPressed: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            splashColor: Colors.transparent,
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            child: SvgPicture.asset(
+              AppImages.mascotImage,
+              height: 250,
+              width: 250,
+            ),
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
           items: <BottomNavigationBarItem>[
@@ -63,11 +86,11 @@ class _AppState extends State<App> {
               ),
               label: 'Cash',
             ),
-            BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                AppImages.mascotImage,
-                height: 70,
-                width: 70,
+            const BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.transparent,
+                size: 1,
               ),
               label: '',
             ),

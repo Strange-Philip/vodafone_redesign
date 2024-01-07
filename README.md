@@ -12,4 +12,9 @@ And a little easter egg where when you tap on the logo on the top left corner, t
 
 And oh, added dynamic theming too.🫣
 
+Feel free to clone the project and play around with it.I tried to organize the code as much as possible.
+
 ## 📸Screenshots
+<img width="450" height="900" src="https://github.com/Strange-Philip/vodafone_redesign/blob/main/assets/demo.gif">
+<img width="450" height="900" src="https://github.com/Strange-Philip/vodafone_redesign/blob/main/assets/screenshot_light.png">
+<img width="450" height="900" src="https://github.com/Strange-Philip/vodafone_redesign/blob/main/assets/screenshot_dark.png">
